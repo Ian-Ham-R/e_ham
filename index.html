@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Ian Ham">
+
+    <title>K A B E</title>
+
+    <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("gqDReHO-lvEGc0HPO");
+        })();
+    </script>
+</head>
+
+<body>
+    <div id="maincontainer">
+        <canvas id="starsBackground"></canvas>
+
+        <div id="morph">
+            <span id="morphText1"></span>
+            <span id="morphText2"></span>
+
+            <svg id="morphFilters">
+                <defs>
+                    <filter id="threshold">
+                        <feColorMatrix in="SourceGraphic" type="matrix" values="1 0 0 0 0
+                                                0 1 0 0 0
+                                                0 0 1 0 0
+                                                0 0 0 255 -140" />
+                    </filter>
+                </defs>
+            </svg>
+        </div>
+
+        <div id="typingText">
+            <div id="typingTextStar1"></div>
+            <div id="typingTextStar2"></div>
+            <div id="typingTextStar3"></div>
+            <p id="typingTextLetters"></p>
+        </div>
+
+        <div id="formContainer">
+            <div id="formPerspective">
+                <div id="formStar"></div>
+            </div>
+
+            <canvas id="formWorld"></canvas>
+
+            <div id="formTextContainer">
+                <p id="formWorldP1">Ahora estamos dentro de una estrella, dentro de uno de mis pensamientos</p>
+                <p id="formWorldP2">Te traje aquí para enseñarte cómo se miran por dentro</p>
+                <p id="formWorldP3">Y para que una estrella se forme debe haber convencimiento, por eso hay muchas
+                    esferas</p>
+                <p id="formWorldP4">Porque cada esfera dentro del nucleo es un recuerdo, una respuesta o un detalle que
+                    me convencen de que este pensamiento existe</p>
+                <p id="formWorldP5">Te traje a una estrella muy especial, esta me impulsa a hacer todo por ti, el nombre
+                    de esta estrella es "Lo mucho que te quiero"</p>
+                <p id="formWorldP6">De hecho cerca de aquí se está formando una estrella sobre casarme contigo</p>
+                <div id="formWorldP7">
+                    <label>Ahora que lo has visto todo y que has estado dentro de mi mente, ¿Hay algo que quieras decirme?
+                        <textarea name="messag" id="formMessage" placeholder="Click Aquí Para Escribir" oninput="textAreaValidation()"></textarea>
+                        <div id="buttonContainer">
+                            <button id="formCancelButton" onclick="CancelMessage()">Omitir</button>
+                            <button id="formButton" onclick="sendMail()" disabled>Confirmar Mensaje</button>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="./assets/js/main.js"></script>
+
+</body>
+
+</html>
