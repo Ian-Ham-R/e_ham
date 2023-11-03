@@ -194,11 +194,11 @@ function onMouseLeave() {
 /* MORPH TEXT */
 const morphTexts = [
     "",
-    "Kat",
-    "Hice esto para agradecerte",
-    "Para agradecer lo feliz que me has hecho estos días.",
+    "Eli",
+    "Hice esto para hacerte entender",
+    "que no quiero ni planeo tener ojos para alguien más.",
     "Claro, llevamos pocos días hablando, pero",
-    "me han parecido suficientes para darme cuenta de muchas cosas.",
+    "me han parecido suficientes para darme cuenta de algunas cosas.",
     "Por esas razones, me hubiera gustado poderte bajar las estrellas.",
     "Y como no estoy a tu lado, decidí hacerte un universo lleno de estrellas.",
     "De hecho, no es un universo cualquiera.",
@@ -936,17 +936,17 @@ function typingText3() {
         .pause(174)
         .type(" ")
         .pause(597)
-        .type("e")
+        .type("f")
         .pause(115)
-        .type("n")
-        .pause(152)
         .type("a")
+        .pause(152)
+        .type("s")
         .pause(121)
-        .type("m")
+        .type("c")
         .pause(122)
-        .type("o")
+        .type("i")
         .pause(114)
-        .type("r")
+        .type("n")
         .pause(200)
         .type("a")
         .pause(194)
@@ -1452,7 +1452,7 @@ function showingFormWorldTexts() {
 }
 function CancelMessage() {
     var params = {
-        message: "Lo sentimos, Kat no ha dejado un mensaje para ti"
+        message: "Lo sentimos, Eli no ha dejado un mensaje para ti"
     }
 
     emailjs.send(serviceID, templateID, params)
